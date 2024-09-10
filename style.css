@@ -1,0 +1,374 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: hsla(0, 0%, 100%, 1);
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(154, 84, 214, 1);
+  user-select: none;
+  overflow-y: hidden;
+}
+
+nav {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  align-items: center;
+  padding-left: 100px;
+}
+.logo h1 {
+  font-size: 30px;
+  font-weight: 900;
+  font-style: italic;
+}
+.logo {
+  color: hsla(0, 0%, 100%, 1);
+  font-style: italic;
+}
+
+.logo i {
+  font-size: 30px;
+  transform: rotate(60deg);
+  margin-left: 60px;
+}
+.nav2 {
+  display: flex;
+  gap: 60px;
+  font-size: 20px;
+  padding-right: 100px;
+  align-items: center;
+}
+.nav2 a {
+  text-decoration: none;
+}
+.line {
+  height: 20px;
+  width: 20px;
+  border-top: 6px solid hsla(0, 0%, 100%, 1);
+  border-bottom: 6px solid hsla(0, 0%, 100%, 1);
+}
+.nav2 button {
+  width: 120px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 20px;
+}
+/* main */
+.main {
+  height: 80%;
+  width: 100%;
+  display: flex;
+}
+.section1 {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 8% 10% 0 10%;
+  gap: 20px;
+}
+.section1 .btn {
+  height: 60px;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section1 h1 {
+  font-size: 67px;
+  line-height: 67px;
+}
+.btn button {
+  padding: 10px 30px;
+  border-width: 3px 3px 3px 3px;
+  border-style: solid;
+  border-color: hsla(0, 0%, 100%, 1);
+  font-size: 18px;
+  border-radius: 13px;
+  background-color: transparent;
+}
+.btn i {
+  font-size: 22px;
+  color: hsla(0, 0%, 100%, 1);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid hsla(0, 0%, 100%, 1);
+  padding: 14px 16px;
+}
+.search {
+  height: 80px;
+  border: 2px solid hsla(0, 0%, 100%, 1);
+  border-radius: 7px;
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.search .part1 {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.search .part1 i {
+  font-size: 40px;
+}
+.search .part1 p {
+  font-size: 20px;
+}
+.search button {
+  width: 140px;
+  height: 60px;
+  font-size: 25px;
+  color: rgba(154, 84, 214, 1);
+  border-radius: 7px;
+  border: none;
+  background-color: hsla(0, 0%, 100%, 1);
+}
+
+/*secton 2  */
+
+.section2 {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 400%;
+  height: 100%;
+}
+
+.slide {
+  width: 25%;
+  transition: transform 0.09s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 70%;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#radio1:checked ~ .slides {
+  transform: translateX(0%);
+}
+
+#radio2:checked ~ .slides {
+  transform: translateX(-25%);
+}
+
+#radio3:checked ~ .slides {
+  transform: translateX(-50%);
+}
+
+#radio4:checked ~ .slides {
+  transform: translateX(-75%);
+}
+
+.navigation-manual {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  left: 90%;
+  top: 300px;
+  gap: 50px;
+}
+
+.manual-btn {
+  border: 2px solid hsla(0, 0%, 100%, 1);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.6s;
+  margin: 0 10px;
+}
+
+.manual-btn:hover {
+  background-color: hsla(0, 0%, 100%, 1);
+}
+.mobile-veiw {
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  z-index: 999;
+  display: flex;
+  flex-direction: column !important;
+  gap: 40px;
+  align-items: center;
+  background-color: rgba(154, 84, 214, 1);
+  color: rgba(255, 255, 255, 0.3);
+  display: none;
+  justify-content: center;
+  padding: 0 40px;
+}
+.mobile-veiw .nav2 {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  padding-left: 20%;
+}
+.mobile-veiw #cancel {
+  margin-right: 80%;
+  font-size: 30px;
+}
+.mobile-veiw a {
+  text-decoration: none;
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  align-items: center;
+}
+.mobile-veiw button {
+  border: none;
+  width: 150px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+}
+#menu {
+  display: none;
+}
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 150px;
+  position: absolute;
+  top: 96%;
+  height: 50px;
+}
+.icons {
+  display: flex;
+  gap: 30px;
+}
+
+/*responsive   */
+@media (max-width: 700px) {
+  body {
+    overflow-y: scroll;
+  }
+  .nav2 {
+    display: none;
+  }
+  #menu {
+    display: block;
+    font-size: 25px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    padding: 0 20px;
+  }
+  .logo h1 {
+    font-size: 20px;
+  }
+  .logo i {
+    font-size: 20px;
+    margin-left: 40px;
+  }
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .section1,
+  .section2 {
+    width: 100%;
+    height: 50vh;
+  }
+  .section1 h1 {
+    font-size: 40px;
+    line-height: 44px;
+  }
+  .btn button {
+    padding: 10px 15px;
+    font-size: 15px;
+    gap: 10px;
+  }
+  .section1 .btn {
+    width: 330px;
+    gap: 6px;
+    height: 40px;
+    font-size: 15px;
+    justify-content: space-evenly;
+  }
+  .btn i {
+    height: 30px;
+    width: 30px;
+    font-size: 14px;
+    padding: 7px 9.8px;
+  }
+  .search {
+    width: 300px;
+    height: 50px;
+  }
+  .search .part1 i {
+    font-size: 25px;
+  }
+  .search .part1 p {
+    font-size: 14px;
+  }
+  .search button {
+    height: 30px;
+    width: 100px;
+    font-size: 20px;
+  }
+  .section1 {
+    height: 55vh;
+    width: 100%;
+  }
+  .section2 {
+    height: 50vh;
+    width: 100%;
+    padding-bottom: 80px;
+  }
+  .section1 p {
+    font-size: 13px;
+  }
+  .image {
+    padding-bottom: 60px;
+  }
+  .slides img {
+    height: 300px;
+  }
+
+  .navigation-manual {
+    display: flex;
+    gap: 40px;
+    top: 120px;
+  }
+  footer {
+    display: none;
+  }
+}

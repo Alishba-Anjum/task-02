@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Image Slider</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="logo animate__animated animate__flip">
+      <i class="fa-solid fa-star"></i>
+      <h1>Creativee</h1>
+    </div>
+    <div class="nav2 animate__animated animate__slideInLeft">
+      <a href="">Home</a>
+      <a href="">For New Student's <i class="fa-solid fa-angle-down"></i></a>
+      <a href="">Contact Us</a>
+      <button>Profile <i class="fa-solid fa-circle-user"></i></button>
+      <div class="line"></div>
+
+    </div>
+    <!-- toggle -->
+    <div onclick="displayMenu()" id="menu">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </nav>
+  <div class="mobile-veiw">
+    <i onclick="cancel()" id="cancel" class="fa-solid fa-xmark"></i>
+    <div class="nav2"></div>
+    <a href="">Home</a>
+    <a href="">For New Student's <i class="fa-solid fa-angle-down"></i></a>
+    <a href="">Contact Us</a>
+    <button>Profile <i class="fa-solid fa-circle-user"></i></button>
+  </div>
+  </div>
+
+  <div class="main">
+    <div class="section1">
+      <h1 class="animate__animated animate__slideInLeft">
+        Learn Website Development
+      </h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis totam non incidunt voluptatem repellat
+        aliquid veritatis aut omnis reprehenderit!</p>
+
+      <div class="btn">
+        <button>Join Now</button>
+        <i class="fa-solid fa-play"></i>
+        <p>_______Watch Demo....</p>
+      </div>
+
+      <div class="search animate__animated animate__slideInLeft">
+        <div class="part1">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <p>Find Course...</p>
+        </div>
+
+        <div class="part2">
+          <button>Search</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section2">
+      <div class="slider">
+        <input type="radio" name="radio-btn" id="radio1" checked>
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+
+        <div class="slides">
+          <!-- Slide 1 -->
+          <div class="slide first">
+            <img src="/img/boy1-removebg-preview.png" class="animate__animated animate__slideInUp" alt="">
+          </div>
+          <!-- Slide 2 -->
+          <div class="slide">
+            <img src="/img/boyon-removebg-preview.png" class="animate__animated animate__slideInUp" alt="">
+          </div>
+          <!-- Slide 3 -->
+          <div class="slide">
+            <img src="/img/boytwoo-removebg-preview.png" class="animate__animated animate__slideInUp" alt="">
+          </div>
+          <!-- Slide 4 -->
+          <div class="slide">
+            <img src="/img/boyfour-removebg-preview.png" class="animate__animated animate__slideInUp" alt="">
+          </div>
+        </div>
+
+        <!-- Manual Navigation -->
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+  <footer>
+    <h4>Creative.com©rights</h4>
+    <div class="icons">
+      <p>FB</p>
+      <p>TW</p>
+      <p>LI</p>
+    </div>
+  </footer>
+
+
+
+
+  <script>
+    let menu = document.querySelector(".mobile-veiw");
+    function displayMenu() {
+      menu.style.display = "block"
+    }
+    function cancel() {
+      menu.style.display = "none";
+    }
+  </script>
+</body>
+
+</html>
